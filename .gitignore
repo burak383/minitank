@@ -1,0 +1,50 @@
+# Unity
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+/.utmp/
+/Claude outputs/
+
+# IDE
+.vs/
+.vscode/
+.idea/
+*.csproj
+*.sln
+*.slnx
+*.suo
+*.user
+*.pidb
+*.booproj
+*.svd
+*.opendb
+*.VC.db
+
+# Build çıktıları
+/ios/
+*.apk
+*.aab
+*.ipa
+*.symbols.zip
+crashlytics-build.properties
+
+# İmza anahtarları — ASLA GitHub'a koyma
+*.keystore
+*.jks
+*.p12
+*.p8
+*.mobileprovision
+
+# Firebase masaüstü (editör) kütüphaneleri: 100 MB'ı aşıyor, iOS/Android build'ine gerekmez
+/Assets/Firebase/Plugins/x86_64/
+/Assets/Firebase/Plugins/x86_64.meta
+
+# OS
+.DS_Store
+Thumbs.db

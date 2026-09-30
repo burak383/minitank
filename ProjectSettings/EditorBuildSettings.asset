@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/MiniTank/Scenes/Login.unity
+    guid: 598e6b23a99a13048a0e097813185b17
+  - enabled: 1
+    path: Assets/MiniTank/Scenes/MainMenu.unity
+    guid: d826501f253a54a46ad8c981cbb71edc
+  - enabled: 1
+    path: Assets/MiniTank/Scenes/Arena1_ColKasabasi.unity
+    guid: 18e3224a2be318a4198c2c78c0975467
+  - enabled: 1
+    path: Assets/MiniTank/Scenes/Arena2_KarliOrman.unity
+    guid: 5d38ae9a05c441c488d2e7958d3cbc3f
+  - enabled: 1
+    path: Assets/MiniTank/Scenes/Arena3_Liman.unity
+    guid: 74a00b888d465bd4e8797968cd6c9d5b
+  - enabled: 1
+    path: Assets/MiniTank/Scenes/Arena4_Fabrika.unity
+    guid: 255a30b12aa26db4a8bf7c27ce0dc2ce
+  m_configObjects:
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  m_UseUCBPForAssetBundles: 0

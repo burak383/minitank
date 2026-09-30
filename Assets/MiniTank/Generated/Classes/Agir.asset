@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bd7930897355a64693ec5fd9501bb9d, type: 3}
+  m_Name: Agir
+  m_EditorClassIdentifier: Assembly-CSharp::MiniTank.TankClassData
+  displayName: "A\u011F\u0131r Tank"
+  description: "Yava\u015F ama \xE7ok dayan\u0131kl\u0131, tek at\u0131\u015Fta b\xFCy\xFCk
+    hasar. Cephe hatt\u0131n\u0131 tutar."
+  prefab: {fileID: 2199610281122072056, guid: 794e0d0029024174ea15ef6b6dd0bd20, type: 3}
+  maxHealth: 1700
+  moveSpeed: 7.5
+  reverseSpeed: 4
+  acceleration: 9
+  hullTurnSpeed: 55
+  turretTurnSpeed: 65
+  minGunPitch: -6
+  maxGunPitch: 12
+  projectilePrefab: {fileID: 3779396260023668242, guid: 3663351cd30804747825b3fc16403fa3, type: 3}
+  damage: 320
+  fireCooldown: 3.5
+  projectileSpeed: 95
+  projectileLifetime: 3
+  projectileUsesGravity: 0
+  splashRadius: 0
+  frontArmor: 0.6
+  sideArmor: 0.9
+  rearArmor: 1.3
+  armorConfigured: 1
+  ability: 3
+  abilityName: Kalkan
+  abilityCooldown: 18
+  abilityDuration: 4
+  abilityPower: 0.6
+  abilityConfigured: 1
+  customModel: {fileID: 0}
+  customModelScale: 1
+  customModelOffset: {x: 0, y: 0, z: 0}
+  customModelRotation: {x: 0, y: 0, z: 0}
+  botEngageRange: 60
+  botPreferredRange: 25

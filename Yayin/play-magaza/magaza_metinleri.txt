@@ -1,0 +1,74 @@
+UYGULAMA ADI (30)
+Mini Tank 5v5
+
+KISA AÇIKLAMA (80)
+5v5 online tank savaşları! Takımını kur, bölgeleri ele geçir, ligde yüksel.
+
+TAM AÇIKLAMA (4000)
+Mini Tank 5v5'e hoş geldin! Kısa ve hızlı tank savaşlarında takımını zafere taşı.
+
+⚔️ 5'E 5 TAKIM SAVAŞLARI
+Dünyanın dört bir yanındaki oyunculara karşı online maçlara katıl. Oyuncu eksikse boşlukları akıllı botlar doldurur, beklemeden oyuna girersin.
+
+👥 ARKADAŞLARINLA OYNA
+Özel oda kur, 5 haneli oda kodunu arkadaşlarına gönder, aynı takımda ya da birbirinize karşı savaşın.
+
+🎯 FARKLI OYUN MODLARI
+• Takım Ölüm Maçı: En çok tankı yok eden takım kazanır.
+• Bölge Ele Geçirme: Noktaları tut, puanı topla.
+• Son Tank: Hayatta kalan son takım kazanır.
+
+🛡️ TANKINI SEÇ
+Hızlı, dayanıklı ya da uzaktan vuran topçu... Her sınıfın kendine özel yeteneği var. Oynayış tarzına uygun tankı seç, takımınla uyum yakala.
+
+🏆 LİGLER VE SIRALAMA
+Maç kazan, kupa topla, liglerde yüksel ve sıralama tablosunda adını en üste yazdır.
+
+🔧 GELİŞTİR VE KİŞİSELLEŞTİR
+Kazandığın altınla tankını geliştir, kamuflajların kilidini aç, günlük görevleri tamamla.
+
+🎮 KOLAY KONTROLLER
+Mobil için tasarlanmış joystick kontrolleri ve kısa öğretici bölümle dakikalar içinde savaşa hazırsın.
+
+🔊 GERÇEKÇİ SESLER
+Top atışları, patlamalar, sekmeler ve motor sesleriyle savaşın içinde hisset.
+
+Mini Tank 5v5 ücretsizdir. Oyun içinde isteğe bağlı satın almalar ve reklamlar bulunur.
+Online maçlar için internet bağlantısı gerekir.
+
+Gizlilik politikası: https://burak383.github.io/minitank-gizlilik/
+
+
+=========================== ENGLISH (optional translation) ===========================
+
+SHORT DESCRIPTION
+5v5 online tank battles! Build your team, capture zones and climb the leagues.
+
+FULL DESCRIPTION
+Welcome to Mini Tank 5v5! Lead your team to victory in fast, action-packed tank battles.
+
+⚔️ 5v5 TEAM BATTLES
+Jump into online matches against players around the world. Smart bots fill empty slots, so you never wait long.
+
+👥 PLAY WITH FRIENDS
+Create a private room, share the 5-character room code and battle together or against each other.
+
+🎯 GAME MODES
+• Team Deathmatch: The team with the most kills wins.
+• Capture: Hold the zones and score points.
+• Last Tank: The last team standing wins.
+
+🛡️ CHOOSE YOUR TANK
+Fast, heavy or long-range artillery... Each class has its own special ability.
+
+🏆 LEAGUES & LEADERBOARD
+Win matches, earn trophies, climb the leagues and top the leaderboard.
+
+🔧 UPGRADE & CUSTOMIZE
+Upgrade your tank with gold, unlock camouflages and complete daily missions.
+
+🎮 EASY CONTROLS
+Mobile-first joystick controls and a quick tutorial get you into battle in minutes.
+
+Mini Tank 5v5 is free to play. It contains optional in-app purchases and ads.
+An internet connection is required for online matches.

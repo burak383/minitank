@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "94031944305",
+    "project_id": "mini-tank-ad145",
+    "storage_bucket": "mini-tank-ad145.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:94031944305:android:a9dde00db2d783ec7e59d0",
+        "android_client_info": {
+          "package_name": "com.burak.minitank"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwmL80ZZ2ZlHudg9hYZhqZumteGrKWNq0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

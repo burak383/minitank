@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bd7930897355a64693ec5fd9501bb9d, type: 3}
+  m_Name: Hafif
+  m_EditorClassIdentifier: Assembly-CSharp::MiniTank.TankClassData
+  displayName: Hafif Tank
+  description: "\xC7ok h\u0131zl\u0131, az canl\u0131. Ele ge\xE7irme noktalar\u0131n\u0131
+    kapmak ve d\xFC\u015Fman\u0131n arkas\u0131ndan dola\u015Fmak i\xE7in ideal."
+  prefab: {fileID: 217951307876084638, guid: c747b4a6a33589e4dbedcdc70c0007e9, type: 3}
+  maxHealth: 650
+  moveSpeed: 15
+  reverseSpeed: 7
+  acceleration: 20
+  hullTurnSpeed: 110
+  turretTurnSpeed: 160
+  minGunPitch: -8
+  maxGunPitch: 18
+  projectilePrefab: {fileID: 3779396260023668242, guid: 3663351cd30804747825b3fc16403fa3, type: 3}
+  damage: 90
+  fireCooldown: 0.8
+  projectileSpeed: 110
+  projectileLifetime: 2
+  projectileUsesGravity: 0
+  splashRadius: 0
+  frontArmor: 0.85
+  sideArmor: 1
+  rearArmor: 1.4
+  armorConfigured: 1
+  ability: 1
+  abilityName: Nitro
+  abilityCooldown: 12
+  abilityDuration: 3
+  abilityPower: 1.7
+  abilityConfigured: 1
+  customModel: {fileID: 0}
+  customModelScale: 1
+  customModelOffset: {x: 0, y: 0, z: 0}
+  customModelRotation: {x: 0, y: 0, z: 0}
+  botEngageRange: 55
+  botPreferredRange: 25

@@ -1,0 +1,111 @@
+# Mini Tank 5v5 — iOS build ve TestFlight'a gönderim (Codemagic)
+# Gerekenler (Codemagic arayüzünde):
+#   1) Teams → Integrations → Developer Portal: App Store Connect API anahtarı, adı "codemagic"
+#   2) Environment variables → grup "unity_credentials" (Secure):
+#        UNITY_EMAIL, UNITY_PASSWORD  (Unity hesabın; iki adımlı doğrulama KAPALI olmalı)
+#   3) Code signing identities: iOS dağıtım sertifikası + com.burak.minitank App Store profili
+
+workflows:
+  ios-testflight:
+    name: iOS → TestFlight
+    instance_type: mac_mini_m2
+    max_build_duration: 120
+    integrations:
+      app_store_connect: codemagic
+    environment:
+      groups:
+        - unity_credentials
+      ios_signing:
+        distribution_type: app_store
+        bundle_identifier: com.burak.minitank
+      vars:
+        UNITY_VERSION: 6000.3.25f1
+        UNITY_CHANGESET: e1dba0a9aba4
+        UNITY_IOS_DIR: ios
+      xcode: latest
+      cocoapods: default
+    triggering:
+      events:
+        - push
+      branch_patterns:
+        - pattern: main
+    scripts:
+      - name: Unity kur (iOS modülüyle)
+        script: |
+          set -e
+          UNITY_APP="/Applications/Unity/Hub/Editor/$UNITY_VERSION/Unity.app"
+          HUB="/Applications/Unity Hub.app/Contents/MacOS/Unity Hub"
+          if [ ! -x "$HUB" ]; then
+            brew install --cask unity-hub
+          fi
+          if [ ! -d "$UNITY_APP" ]; then
+            "$HUB" -- --headless install --version "$UNITY_VERSION" --changeset "$UNITY_CHANGESET" --architecture arm64 --module ios
+          elif [ ! -d "/Applications/Unity/Hub/Editor/$UNITY_VERSION/PlaybackEngines/iOSSupport" ]; then
+            "$HUB" -- --headless install-modules --version "$UNITY_VERSION" --module ios
+          fi
+          test -x "$UNITY_APP/Contents/MacOS/Unity"
+          echo "UNITY_BIN=$UNITY_APP/Contents/MacOS/Unity" >> $CM_ENV
+          echo "UNITY_APP=$UNITY_APP" >> $CM_ENV
+
+      - name: Unity lisansını etkinleştir (Personal)
+        script: |
+          set -e
+          ULC=$(find "$UNITY_APP" "/Applications/Unity Hub.app" -name Unity.Licensing.Client -type f 2>/dev/null | head -1)
+          echo "Lisans istemcisi: $ULC"
+          if [ -n "$ULC" ]; then
+            "$ULC" --activate-all --include-personal --username "$UNITY_EMAIL" --password "$UNITY_PASSWORD" || true
+          fi
+          # Yedek yöntem: editör üzerinden giriş
+          "$UNITY_BIN" -batchmode -nographics -quit -logFile - \
+            -username "$UNITY_EMAIL" -password "$UNITY_PASSWORD" || true
+
+      - name: Xcode projesini üret
+        script: |
+          "$UNITY_BIN" -batchmode -nographics -quit -logFile - \
+            -projectPath "$CM_BUILD_DIR" \
+            -buildTarget iOS \
+            -executeMethod MiniTank.EditorTools.IosBuild.Build
+          test -d "$UNITY_IOS_DIR"
+
+      - name: CocoaPods (Firebase, AdMob)
+        script: |
+          cd "$UNITY_IOS_DIR"
+          if [ -f Podfile ] && [ ! -d Unity-iPhone.xcworkspace ]; then
+            pod install --repo-update
+          fi
+
+      - name: İmzalama ayarları
+        script: |
+          xcode-project use-profiles
+
+      - name: IPA oluştur
+        script: |
+          cd "$UNITY_IOS_DIR"
+          if [ -d Unity-iPhone.xcworkspace ]; then
+            xcode-project build-ipa --workspace Unity-iPhone.xcworkspace --scheme Unity-iPhone
+          else
+            xcode-project build-ipa --project Unity-iPhone.xcodeproj --scheme Unity-iPhone
+          fi
+
+    artifacts:
+      - ios/build/ios/ipa/*.ipa
+      - build/ios/ipa/*.ipa
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
+
+    publishing:
+      scripts:
+        - name: Unity lisansını iade et
+          script: |
+            ULC=$(find "$UNITY_APP" "/Applications/Unity Hub.app" -name Unity.Licensing.Client -type f 2>/dev/null | head -1)
+            [ -n "$ULC" ] && "$ULC" --return-ulf || true
+            "$UNITY_BIN" -batchmode -nographics -quit -returnlicense \
+              -username "$UNITY_EMAIL" -password "$UNITY_PASSWORD" || true
+      email:
+        recipients:
+          - seolen8@gmail.com
+        notify:
+          success: true
+          failure: true
+      app_store_connect:
+        auth: integration
+        submit_to_testflight: true

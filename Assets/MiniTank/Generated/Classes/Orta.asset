@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bd7930897355a64693ec5fd9501bb9d, type: 3}
+  m_Name: Orta
+  m_EditorClassIdentifier: Assembly-CSharp::MiniTank.TankClassData
+  displayName: Orta Tank
+  description: "Dengeli h\u0131z, z\u0131rh ve ate\u015F g\xFCc\xFC. Her duruma uyum
+    sa\u011Flar."
+  prefab: {fileID: 4008182473419765567, guid: 8883fcf050dcd5f45bdac2f2aa91b1de, type: 3}
+  maxHealth: 1000
+  moveSpeed: 11
+  reverseSpeed: 5.5
+  acceleration: 14
+  hullTurnSpeed: 80
+  turretTurnSpeed: 100
+  minGunPitch: -8
+  maxGunPitch: 15
+  projectilePrefab: {fileID: 3779396260023668242, guid: 3663351cd30804747825b3fc16403fa3, type: 3}
+  damage: 180
+  fireCooldown: 2
+  projectileSpeed: 100
+  projectileLifetime: 2.5
+  projectileUsesGravity: 0
+  splashRadius: 0
+  frontArmor: 0.75
+  sideArmor: 1
+  rearArmor: 1.35
+  armorConfigured: 1
+  ability: 2
+  abilityName: "Onar\u0131m"
+  abilityCooldown: 20
+  abilityDuration: 0
+  abilityPower: 0.3
+  abilityConfigured: 1
+  customModel: {fileID: 0}
+  customModelScale: 1
+  customModelOffset: {x: 0, y: 0, z: 0}
+  customModelRotation: {x: 0, y: 0, z: 0}
+  botEngageRange: 65
+  botPreferredRange: 35
